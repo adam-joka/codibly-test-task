@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Codibly.Domain.Emails.Data;
+using Codibly.Domain.Emails.Repositories;
+using Codibly.Domain.Emails.Services;
 using Codibly.Infrastructure.Filters;
 using MediatR;
 using MediatR.Extensions.FluentValidation.AspNetCore;
@@ -9,6 +12,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -47,6 +51,12 @@ namespace Codibly
 
             services.AddMediatR(domainAssembly);
             services.AddFluentValidation(new[] { domainAssembly });
+
+            services.AddTransient<IEmailsRepository, EmailsRepository>();
+            services.AddTransient<IEmailsService, EmailsService>();
+
+            services.AddDbContext<EmailsDataContext>(options => options.UseInMemoryDatabase(databaseName: "Emails"));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
