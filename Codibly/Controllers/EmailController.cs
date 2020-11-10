@@ -31,7 +31,16 @@ namespace Codibly.Controllers
         [Route("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            return Ok(await mediator.Send(new GetEmail { Id = id }).ConfigureAwait(false));
+            EmailModel email = await mediator.Send(new GetEmail { Id = id }).ConfigureAwait(false);
+
+            //TODO: use filter to catch empty responses and change it to 404 
+            //      there to save coding in controllers
+            if(email == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(email);
         }
 
         [HttpPost]

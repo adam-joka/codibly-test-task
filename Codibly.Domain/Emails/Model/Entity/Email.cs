@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Codibly.Domain.Emails.Model.Entity
 {
+    /// <summary>
+    /// Entity email object to represend db form of it
+    /// </summary>
     public class Email
     {
         [Key]

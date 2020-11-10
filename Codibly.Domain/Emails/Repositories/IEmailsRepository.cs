@@ -9,6 +9,12 @@ namespace Codibly.Domain.Emails.Repositories
 {
     public interface IEmailsRepository
     {
+        /// <summary>
+        /// Gets email with provided id
+        /// </summary>
+        /// <param name="emailId">id of the email</param>
+        /// <param name="cancellationToken">cancellation token</param>
+        /// <returns>Email with provided id or null if not found</returns>
         Task<EmailModel> GetEmail(int emailId, CancellationToken cancellationToken);
 
         Task<List<EmailModel>> GetEmails(CancellationToken cancellationToken);

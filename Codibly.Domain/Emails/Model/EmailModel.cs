@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Codibly.Domain.Emails.Model
 {
+    /// <summary>
+    /// Email model to be used as data contract in email api
+    /// </summary>
     public class EmailModel
     {
         public int Id { get; set; }

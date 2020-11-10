@@ -11,8 +11,12 @@ namespace Codibly.Domain.Emails.Validators
         public CreateEmailValidator()
         {
             RuleFor(email => email.Email).NotNull();
-            RuleFor(email => email.Email.Recipients).NotNull();
             RuleFor(email => email.Email.Recipients).NotEmpty();
+
+            //TODO: validate if recipents are valid emails
+
+            // TODO: validate if sender is valid email
+
         }
     }
 }

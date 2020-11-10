@@ -22,11 +22,8 @@ namespace Codibly.Domain.Emails.Repositories
 
         public async Task<int> CreateEmail(EmailModel email, CancellationToken cancellationToken)
         {
-            // as we're using in memory db we need to generate Id of the emaik
-            // for now let's make it random
             var newEmail = new Email
             {
-                Id = GenerateId(),
                 Recipients = string.Join(",", email.Recipients), // pretend one to many relation
                 Body = email.Body,
                 Sender = email.Sender,
@@ -73,17 +70,6 @@ namespace Codibly.Domain.Emails.Repositories
             db.Emails.Attach(email);
             db.Entry(email).Property(x => x.SentOn).IsModified = true;
             await db.SaveChangesAsync(cancellationToken);
-        }
-
-        //Function to get random number
-        private static readonly Random getrandom = new Random();
-
-        private int GenerateId()
-        {
-            lock (getrandom) // synchronize
-            {
-                return getrandom.Next(1, 100);
-            }
         }
 
         private EmailModel ToEmailModel(Email email)

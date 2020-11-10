@@ -11,7 +11,16 @@ namespace Codibly.Domain.Emails.Data
         public EmailsDataContext(DbContextOptions<EmailsDataContext> options)
             : base(options) { }
 
-        public DbSet<Email> Emails { get;set; }
+        public DbSet<Email> Emails { get; set; }
 
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Email>()
+                .Property(e => e.Id)
+                .ValueGeneratedOnAdd();
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Codibly.Domain.Emails.Data;
+using Codibly.Domain.Emails.Model.Configuration;
 using Codibly.Domain.Emails.Repositories;
 using Codibly.Domain.Emails.Services;
 using Codibly.Infrastructure.Filters;
@@ -56,6 +57,11 @@ namespace Codibly
             services.AddTransient<IEmailsService, EmailsService>();
 
             services.AddDbContext<EmailsDataContext>(options => options.UseInMemoryDatabase(databaseName: "Emails"));
+
+
+            // configure strongly typed settings object
+            var emailSettingsSection = Configuration.GetSection("EmailSettings");
+            services.Configure<EmailConfiguration>(emailSettingsSection);
 
         }
 
