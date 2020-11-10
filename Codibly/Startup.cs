@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Codibly.Infrastructure.Filters;
+using MediatR;
+using MediatR.Extensions.FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,7 +28,25 @@ namespace Codibly
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvcCore(options =>
+            {
+
+                options.Filters.Add(typeof(HttpGlobalExceptionFilter));
+
+            })
+            .AddApiExplorer()
+            .AddDataAnnotations()
+            .SetCompatibilityVersion(CompatibilityVersion.Latest);
+
+            services.AddHttpContextAccessor();
+
             services.AddControllers();
+
+
+            var domainAssembly = typeof(Domain.C).Assembly;
+
+            services.AddMediatR(domainAssembly);
+            services.AddFluentValidation(new[] { domainAssembly });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
