@@ -19,6 +19,11 @@ namespace Codibly.Domain.Emails.Services
         }
         public Task SendEmail(EmailModel email, CancellationToken cancellationToken)
         {
+            if(email == null)
+            {
+                throw new ArgumentNullException(nameof(email));
+            }
+
             // set the right sender
             string sender = null;
             if (string.IsNullOrWhiteSpace(email.Sender))
