@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Codibly.Infrastructure.Filters
+namespace  Infrastructure.Filters
 {
     public class HttpGlobalExceptionFilter : IExceptionFilter
     {

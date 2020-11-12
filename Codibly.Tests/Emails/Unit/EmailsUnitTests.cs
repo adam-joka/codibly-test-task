@@ -1,5 +1,5 @@
-﻿using Codibly.Controllers;
-using Codibly.Domain.Emails.Model;
+﻿using Controllers;
+using Domain.Emails.Model;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Codibly.Tests.Emails.Unit
+namespace Tests.Emails.Unit
 {
     public class EmailContollerUnitTests
     {

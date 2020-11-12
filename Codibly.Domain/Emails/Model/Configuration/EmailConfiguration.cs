@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Codibly.Domain.Emails.Model.Configuration
+namespace  Domain.Emails.Model.Configuration
 {
     public class EmailConfiguration
     {

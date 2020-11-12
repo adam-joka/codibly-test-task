@@ -1,9 +1,9 @@
-﻿using Codibly.Domain.Emails.Model;
+﻿using  Domain.Emails.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Codibly.Domain.Emails.Model
+namespace  Domain.Emails.Model
 {
     /// <summary>
     /// Email model to be used as data contract in email api

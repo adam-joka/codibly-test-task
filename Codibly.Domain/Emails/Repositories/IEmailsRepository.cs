@@ -1,11 +1,11 @@
-﻿using Codibly.Domain.Emails.Model;
+﻿using  Domain.Emails.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Codibly.Domain.Emails.Repositories
+namespace  Domain.Emails.Repositories
 {
     public interface IEmailsRepository
     {

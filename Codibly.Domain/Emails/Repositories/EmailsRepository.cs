@@ -1,6 +1,6 @@
-﻿using Codibly.Domain.Emails.Data;
-using Codibly.Domain.Emails.Model;
-using Codibly.Domain.Emails.Model.Entity;
+﻿using  Domain.Emails.Data;
+using  Domain.Emails.Model;
+using  Domain.Emails.Model.Entity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Codibly.Domain.Emails.Repositories
+namespace  Domain.Emails.Repositories
 {
     public class EmailsRepository : IEmailsRepository
     {

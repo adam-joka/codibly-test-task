@@ -1,9 +1,9 @@
-﻿using Codibly.Domain.Emails.Exceptions;
-using Codibly.Domain.Emails.Model;
-using Codibly.Domain.Emails.Notifications;
-using Codibly.Domain.Emails.Repositories;
-using Codibly.Domain.Emails.Requests;
-using Codibly.Domain.Emails.Services;
+﻿using  Domain.Emails.Exceptions;
+using  Domain.Emails.Model;
+using  Domain.Emails.Notifications;
+using  Domain.Emails.Repositories;
+using  Domain.Emails.Requests;
+using  Domain.Emails.Services;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Codibly.Domain.Emails.RequestHandlers
+namespace  Domain.Emails.RequestHandlers
 {
     public class SendAllPendingEmailsHandler : IRequestHandler<SendAllPendingEmails>
     {

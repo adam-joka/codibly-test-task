@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Codibly.Domain.Emails.Notifications
+namespace  Domain.Emails.Notifications
 {
     public class FailedToSendEmail : INotification
     {

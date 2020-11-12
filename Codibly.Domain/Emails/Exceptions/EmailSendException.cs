@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Codibly.Domain.Emails.Exceptions
+namespace  Domain.Emails.Exceptions
 {
     public class EmailSendException : Exception
     {

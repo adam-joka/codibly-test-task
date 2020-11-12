@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Codibly.Domain.Emails.Model
+namespace  Domain.Emails.Model
 {
     public enum EmailStatus
     {

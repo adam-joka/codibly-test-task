@@ -1,4 +1,4 @@
-﻿using Codibly.Domain.Emails.Notifications;
+﻿using  Domain.Emails.Notifications;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Codibly.Domain.Emails.NotificationHandlers
+namespace  Domain.Emails.NotificationHandlers
 {
     public class EmailSentHandler : INotificationHandler<EmailSent>
     {

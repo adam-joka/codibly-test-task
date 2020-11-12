@@ -1,6 +1,6 @@
-using Codibly.Domain.Emails.Model;
-using Codibly.Domain.Emails.Model.Configuration;
-using Codibly.Domain.Emails.Services;
+using Domain.Emails.Model;
+using Domain.Emails.Model.Configuration;
+using Domain.Emails.Services;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Codibly.Tests
+namespace Tests
 {
     public class EmailsServiceTests
     {

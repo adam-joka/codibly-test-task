@@ -1,5 +1,5 @@
-﻿using Codibly.Domain.Emails.Model;
-using Codibly.Domain.Emails.Model.Configuration;
+﻿using  Domain.Emails.Model;
+using  Domain.Emails.Model.Configuration;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Codibly.Domain.Emails.Services
+namespace  Domain.Emails.Services
 {
     public class EmailsService : IEmailsService
     {

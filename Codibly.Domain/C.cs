@@ -1,4 +1,4 @@
-﻿namespace Codibly.Domain
+﻿namespace Domain
 {
     /// <summary>
     /// Empty class to be used in Setup.cs

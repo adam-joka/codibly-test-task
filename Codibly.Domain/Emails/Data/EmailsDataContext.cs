@@ -1,10 +1,10 @@
-﻿using Codibly.Domain.Emails.Model.Entity;
+﻿using  Domain.Emails.Model.Entity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Codibly.Domain.Emails.Data
+namespace  Domain.Emails.Data
 {
     public class EmailsDataContext : DbContext
     {

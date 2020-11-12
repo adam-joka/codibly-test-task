@@ -1,4 +1,4 @@
-﻿namespace Codibly.Common.Infrastructure
+﻿namespace  Common.Infrastructure
 {
     public interface IConnectionStringProvider
     {

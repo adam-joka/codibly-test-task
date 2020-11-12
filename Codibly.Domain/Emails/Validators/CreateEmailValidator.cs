@@ -1,10 +1,10 @@
-﻿using Codibly.Domain.Emails.Requests;
+﻿using  Domain.Emails.Requests;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Codibly.Domain.Emails.Validators
+namespace  Domain.Emails.Validators
 {
     public class CreateEmailValidator : AbstractValidator<CreateEmail>
     {

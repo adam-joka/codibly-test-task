@@ -1,5 +1,5 @@
-﻿using Codibly.Domain.Emails.Model;
-using Codibly.Domain.Emails.Requests;
+﻿using  Domain.Emails.Model;
+using  Domain.Emails.Requests;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Codibly.Controllers
+namespace  Controllers
 {
     [ApiController]
     [Produces("application/json")]

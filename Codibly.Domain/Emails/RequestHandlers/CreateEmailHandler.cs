@@ -1,5 +1,5 @@
-﻿using Codibly.Domain.Emails.Repositories;
-using Codibly.Domain.Emails.Requests;
+﻿using  Domain.Emails.Repositories;
+using  Domain.Emails.Requests;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Codibly.Domain.Emails.RequestHandlers
+namespace  Domain.Emails.RequestHandlers
 {
     public class CreateEmailHandler : IRequestHandler<CreateEmail, int>
     {
