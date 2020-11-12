@@ -15,9 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Codibly.Common\Common.csproj" />
-    <ProjectReference Include="..\Codibly.Domain\Domain.csproj" />
-    <ProjectReference Include="..\Codibly\Api.csproj" />
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Api\Api.csproj" />
   </ItemGroup>
 
 </Project>
